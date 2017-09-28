@@ -2,6 +2,7 @@
 
 | Behavior                                                              | Input                    | Output           |
 |-----------------------------------------------------------------------|--------------------------|------------------|
+| the program shows a grid of squares                                   | ""                       | squares          |
 | start button starts the game                                          | "start"                  | game starts      |
 | when a square is clicked, gets filled with an X                       | "click square"           | "X"              |
 | after a square is clicked, the turn is passed                         | "click square"           | "turn passes"    |

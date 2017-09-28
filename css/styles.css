@@ -1,0 +1,33 @@
+body {
+
+}
+
+.box {
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  border: 3px solid black;
+  padding: 0px;
+  margin: -3px;
+}
+
+.row {
+  margin: 0px;
+  padding: 0px;
+}
+
+.top-row{
+  border-top: none;
+}
+
+.left-column{
+  border-left: none;
+}
+
+.right-column{
+  border-right: none;
+}
+
+.bottom-row{
+  border-bottom: none;
+}
