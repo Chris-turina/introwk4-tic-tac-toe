@@ -7,4 +7,5 @@
 | doesn't allow invalid moves                                           | "clicks invalid square"  | does nothing     |
 | when board is filled, game is a draw                                  | "all squares clicked"    | "draw"           |
 | if a player gets 3 in a row, they win                                 | "3 symbols in a row"     | "win! (or lose)" |
+| if player has won, don't accept input                                 | "click"                  | nothing          |
 | user can press start button to start the game                         | "press start"            | game starts      |

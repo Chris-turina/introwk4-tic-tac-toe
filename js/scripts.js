@@ -3,6 +3,7 @@ function Game(players) {
   this.players = players;
   this.board = new Board();
   this.currentPlayer = this.players[0];
+  this.allowPlay = true;
 }
 
 Game.prototype.passTurn = function() {
@@ -15,7 +16,7 @@ Game.prototype.passTurn = function() {
 }
 
 Game.prototype.tryMakeMove = function(player, space) {
-  if(this.board.tryMarkBox(player, space)) {
+  if(this.board.tryMarkBox(player, space) && this.allowPlay === true) {
     this.passTurn();
     return true;
   }
@@ -26,12 +27,15 @@ Game.prototype.tryMakeMove = function(player, space) {
 
 Game.prototype.checkResult = function() {
   if (this.board.checkForWin() === "player0win") {
+    this.allowPlay = false;
     return "player0win";
   }
   if (this.board.checkForWin() === "player1win") {
+    this.allowPlay = false;
     return "player1win";
   }
   if (this.board.moveCounter === 9) {
+    this.allowPlay = false;
     return "draw";
   }
 }
@@ -116,7 +120,6 @@ $(document).ready(function() {
       if (game.checkResult() === "draw") {
         console.log("Draw!");
       }
-
     }
   });
 });
