@@ -24,6 +24,12 @@ Game.prototype.tryMakeMove = function(player, space) {
   }
 }
 
+Game.prototype.checkResult = function() {
+  if (this.board.moveCounter === 9) {
+    return "draw";
+  }
+}
+
 // Player constructor and methods
 function Player(id, mark) {
   this.id = id;
@@ -34,6 +40,7 @@ function Player(id, mark) {
 function Board() {
   // box has 0 = empty, 1 = player one, -1 = player two
   this.boxes = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+  this.moveCounter = 0;
 }
 
 // space = [x, y] coordinates
@@ -48,6 +55,7 @@ Board.prototype.tryMarkBox = function(player, space) {
     else if (player.id === 1) {
       this.boxes[y][x] = -1;
     }
+    this.moveCounter++;
     return true;
   }
   else {
@@ -67,6 +75,10 @@ $(document).ready(function() {
 
     if(game.tryMakeMove(game.currentPlayer, [x, y])) {
       $(this).text(game.currentPlayer.mark);
+
+      if (game.checkResult() === "draw") {
+        console.log("Draw!");
+      }
     }
   });
 });
