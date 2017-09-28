@@ -2,16 +2,15 @@ body {
 
 }
 
-#board {
-  line-height: 0px;
-  font-size: 0px;
-}
-
 .box {
-  display: inline-block;
+  display: block;
+  float: left;
   height: 300px;
   width: 300px;
   border: 3px solid black;
+  text-align: center;
+  line-height: 300px;
+  font-size: 200px;
 }
 
 .top-row{
