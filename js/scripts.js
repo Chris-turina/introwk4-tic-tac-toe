@@ -104,12 +104,33 @@ $(document).ready(function() {
   var players = [player1, player2];
   var game = new Game(players);
 
+  $(".box").hover(function() {
+    var x = $(this).attr("xCoordiante");
+    var y = $(this).attr("yCoordiante");
+    if(game.board.boxes[y][x] === 0) {
+      if (game.currentPlayer.id === 0) {
+        $(this).addClass("waves-effect waves-teal");
+      }
+      if (game.currentPlayer.id === 1) {
+        $(this).addClass("waves-effect waves-purple");
+      }
+    }
+
+  }, function() {
+      var x = $(this).attr("xCoordiante");
+      var y = $(this).attr("yCoordiante");
+      if(game.board.boxes[y][x] === 0) {
+        $(this).removeClass("waves-effect waves-teal");
+        $(this).removeClass("waves-effect waves-purple");
+      }
+    });
+
   $(".box").click(function() {
     var x = $(this).attr("xCoordiante");
     var y = $(this).attr("yCoordiante");
 
     if(game.tryMakeMove(game.currentPlayer, [x, y])) {
-      $(this).text(game.currentPlayer.mark);
+      $(this).append("<p>" + game.currentPlayer.mark + "</p>");
 
       if (game.checkResult() === "player0win") {
         console.log("Player 1 Wins!");

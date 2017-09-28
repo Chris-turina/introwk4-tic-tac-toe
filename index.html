@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/materialize.js"></script>
     <script src="js/scripts.js"></script>
     <title>Tic Tac Toe</title>
   </head>
@@ -13,32 +15,32 @@
       <div class="jumbotron">
         <h1>Tic Tac Toe</h1>
       </div>
-      <div id="board">
+      <div id="board" class="z-depth-5">
         <!-- Y-axis flipped, top left = (0, 0) -->
-        <div>
-          <div class="box left-column top-row" xCoordiante="0" yCoordiante="0">
+        <div class="board-row">
+          <div class="box left-column top-row card-panel hoverable" xCoordiante="0" yCoordiante="0">
           </div>
-          <div class="box top-row" xCoordiante="1" yCoordiante="0">
+          <div class="box top-row card-panel hoverable" xCoordiante="1" yCoordiante="0">
           </div>
-          <div class="box top-row right-column" xCoordiante="2" yCoordiante="0">
-          </div>
-        </div>
-
-        <div>
-          <div class="box left-column" xCoordiante="0" yCoordiante="1">
-          </div>
-          <div class="box" xCoordiante="1" yCoordiante="1">
-          </div>
-          <div class="box right-column" xCoordiante="2" yCoordiante="1">
+          <div class="box top-row right-column card-panel hoverable" xCoordiante="2" yCoordiante="0">
           </div>
         </div>
 
-        <div>
-          <div class="box left-column bottom-row" xCoordiante="0" yCoordiante="2">
+        <div class="board-row">
+          <div class="box left-column card-panel hoverable" xCoordiante="0" yCoordiante="1">
           </div>
-          <div class="box bottom-row" xCoordiante="1" yCoordiante="2">
+          <div class="box card-panel hoverable" xCoordiante="1" yCoordiante="1">
           </div>
-          <div class="box right-column bottom-row" xCoordiante="2" yCoordiante="2">
+          <div class="box right-column card-panel hoverable" xCoordiante="2" yCoordiante="1">
+          </div>
+        </div>
+
+        <div class="board-row">
+          <div class="box left-column bottom-row card-panel hoverable" xCoordiante="0" yCoordiante="2">
+          </div>
+          <div class="box bottom-row card-panel hoverable" xCoordiante="1" yCoordiante="2">
+          </div>
+          <div class="box right-column bottom-row card-panel hoverable" xCoordiante="2" yCoordiante="2">
           </div>
         </div>
       </div>
