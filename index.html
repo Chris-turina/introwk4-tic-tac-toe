@@ -14,30 +14,31 @@
         <h1>Tic Tac Toe</h1>
       </div>
       <div id="board">
-        <div class="row">
-          <div id="box-0" class="box left-column top-row">
+        <!-- Y-axis flipped, top left = (0, 0) -->
+        <div>
+          <div class="box left-column top-row" xCoordiante="0" yCoordiante="0">
           </div>
-          <div id="box-1" class="box top-row">
+          <div class="box top-row" xCoordiante="1" yCoordiante="0">
           </div>
-          <div id="box-2" class="box top-row right-column">
-          </div>
-        </div>
-
-        <div class="row">
-          <div id="box-3" class="box left-column">
-          </div>
-          <div id="box-4" class="box">
-          </div>
-          <div id="box-5" class="box right-column">
+          <div class="box top-row right-column" xCoordiante="2" yCoordiante="0">
           </div>
         </div>
 
-        <div class="row">
-          <div id="box-6" class="box left-column bottom-row">
+        <div>
+          <div class="box left-column" xCoordiante="0" yCoordiante="1">
           </div>
-          <div id="box-7" class="box bottom-row">
+          <div class="box" xCoordiante="1" yCoordiante="1">
           </div>
-          <div id="box-8" class="box right-column bottom-row">
+          <div class="box right-column" xCoordiante="2" yCoordiante="1">
+          </div>
+        </div>
+
+        <div>
+          <div class="box left-column bottom-row" xCoordiante="0" yCoordiante="2">
+          </div>
+          <div class="box bottom-row" xCoordiante="1" yCoordiante="2">
+          </div>
+          <div class="box right-column bottom-row" xCoordiante="2" yCoordiante="2">
           </div>
         </div>
       </div>
