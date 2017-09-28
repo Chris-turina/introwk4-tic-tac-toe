@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/materialize.js"></script>
@@ -11,39 +12,55 @@
     <title>Tic Tac Toe</title>
   </head>
   <body>
+    <nav>
+  <div class="nav-wrapper">
+    <a class="brand-logo center" id="header">Tic Tac Toe</a>
+  </div>
+</nav>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Tic Tac Toe</h1>
-      </div>
-      <div id="board" class="z-depth-5">
-        <!-- Y-axis flipped, top left = (0, 0) -->
-        <div class="board-row">
-          <div class="box left-column top-row card-panel hoverable" xCoordiante="0" yCoordiante="0">
+      <div class="center-align">
+        <div id="board" class=" z-depth-5">
+          <!-- Y-axis flipped, top left = (0, 0) -->
+          <div class="board-row">
+            <div class="box left-column top-row card-panel hoverable" xCoordiante="0" yCoordiante="0">
+            </div>
+            <div class="box top-row card-panel hoverable" xCoordiante="1" yCoordiante="0">
+            </div>
+            <div class="box top-row right-column card-panel hoverable" xCoordiante="2" yCoordiante="0">
+            </div>
           </div>
-          <div class="box top-row card-panel hoverable" xCoordiante="1" yCoordiante="0">
-          </div>
-          <div class="box top-row right-column card-panel hoverable" xCoordiante="2" yCoordiante="0">
-          </div>
-        </div>
 
-        <div class="board-row">
-          <div class="box left-column card-panel hoverable" xCoordiante="0" yCoordiante="1">
+          <div class="board-row">
+            <div class="box left-column card-panel hoverable" xCoordiante="0" yCoordiante="1">
+            </div>
+            <div class="box card-panel hoverable" xCoordiante="1" yCoordiante="1">
+            </div>
+            <div class="box right-column card-panel hoverable" xCoordiante="2" yCoordiante="1">
+            </div>
           </div>
-          <div class="box card-panel hoverable" xCoordiante="1" yCoordiante="1">
-          </div>
-          <div class="box right-column card-panel hoverable" xCoordiante="2" yCoordiante="1">
-          </div>
-        </div>
 
-        <div class="board-row">
-          <div class="box left-column bottom-row card-panel hoverable" xCoordiante="0" yCoordiante="2">
-          </div>
-          <div class="box bottom-row card-panel hoverable" xCoordiante="1" yCoordiante="2">
-          </div>
-          <div class="box right-column bottom-row card-panel hoverable" xCoordiante="2" yCoordiante="2">
+          <div class="board-row">
+            <div class="box left-column bottom-row card-panel hoverable" xCoordiante="0" yCoordiante="2">
+            </div>
+            <div class="box bottom-row card-panel hoverable" xCoordiante="1" yCoordiante="2">
+            </div>
+            <div class="box right-column bottom-row card-panel hoverable" xCoordiante="2" yCoordiante="2">
+            </div>
           </div>
         </div>
+        <a id="refresh"class="re-play btn-floating btn-large waves-effect waves-light red"><i class="material-icons">refresh</i></a>
       </div>
     </div>
+
+    <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4 id="winning-player"></h4>
+      <p>Congrats you finished tic tac toe!!!!!</p>
+    </div>
+    <div class="modal-footer">
+      <a class="re-play btn-floating btn-large waves-effect waves-light red"><i class="material-icons">refresh</i></a>
+    </div>
+  </div>
   </body>
 </html>

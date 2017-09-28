@@ -1,5 +1,17 @@
+body {
+  background-image: url(../img/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  color: #ee6e73;
+}
+
+#header {
+  font-size: 60px;
+}
+
 #board {
   width: 900px;
+  margin-top: 40px;
 }
 
 .box {
@@ -8,11 +20,12 @@
   height: 300px;
   width: 300px;
   line-height: 300px;
-  border: 3px solid black;
+  border: 6px solid #ee6e73;
   text-align: center;
   font-size: 200px;
   margin: 0px;
   padding: 0px;
+  background: transparent;
 }
 
 /*.board-row {
@@ -34,4 +47,23 @@
 
 .bottom-row{
   border-bottom: none;
+}
+
+#refresh {
+  margin-top: 40px;
+}
+
+.modal {
+  background-color: black;
+  color: white;
+}
+
+.modal-content {
+  background-color: #ee6e73;
+  color: white;
+}
+
+.modal .modal-footer {
+  background-color: #ee6e73;
+  color: white;
 }

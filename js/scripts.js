@@ -99,6 +99,7 @@ Board.prototype.checkForWin = function() {
 }
 
 $(document).ready(function() {
+  $('.modal').modal();
   var player1 = new Player(0, "O");
   var player2 = new Player(1, "X");
   var players = [player1, player2];
@@ -133,14 +134,20 @@ $(document).ready(function() {
       $(this).append("<p>" + game.currentPlayer.mark + "</p>");
 
       if (game.checkResult() === "player0win") {
-        console.log("Player 1 Wins!");
+        $("#winning-player").text("Player 1 Wins!")
+        $('#modal1').modal("open");
       }
       if (game.checkResult() === "player1win") {
-        console.log("Player 2 Wins!");
+        $("#winning-player").text("Player 2 Wins!")
+        $('#modal1').modal('open');
       }
       if (game.checkResult() === "draw") {
-        console.log("Draw!");
+        $("#winning-player").text("It is a Draw Play Again to Settle the Score")
+        $('#modal1').modal("open");
       }
     }
+  });
+  $(".re-play").click(function() {
+    location.reload();
   });
 });
